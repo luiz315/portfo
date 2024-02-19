@@ -1,0 +1,10 @@
+body {
+    background-color: blueviolet;
+}
+
+.texto {
+    font: bold;
+    font-size: 36px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    align: center;
+}
