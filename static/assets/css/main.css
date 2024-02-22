@@ -2493,7 +2493,7 @@ ul.feature-icons li {
 	padding: 0.35em 0 0 3.5em;
 	position: relative;
 	vertical-align: top;
-	width: 48%;
+	width: 45%;
 }
 
 ul.feature-icons li:before {
@@ -2520,7 +2520,7 @@ ul.feature-icons li:before {
 	position: absolute;
 	text-align: center;
 	top: 0;
-	width: 2.5em;
+	width: 2.8em;
 }
 
 /* Icons */

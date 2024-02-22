@@ -6,6 +6,10 @@ app = Flask(__name__)
 def home_page():
     return render_template('index.html')
 
+@app.route('/<string:page_name>')
+def html_page(page_name):
+    return render_template('page_name')
+
 @app.route('/thank_you' )
 def tanks_page():
     return render_template('thank_you.html')
@@ -19,7 +23,7 @@ def write_to_file(data):
           file = database.write(f'\nnome:{name},email:{email},assunto:{subjetc}, mensagem:{message}')
 
 def write_to_csv(data):
-     with open ('database.csv' , newline=" ", mode='a') as database2:
+     with open ('database.csv' ,  mode='a') as database2:
           email= data["email"] 
           name = data["name"] 
           subjetc = data["subject"] 
@@ -30,7 +34,7 @@ def write_to_csv(data):
 
 @app.route('/submit_form', methods=['POST', 'GET'])
 def submit_form():
-         if request.method == 'POST'or "GET":
+         if request.method == 'POST':
             data = request.form.to_dict()
             write_to_csv(data)
             return redirect('/thank_you')
