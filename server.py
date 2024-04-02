@@ -14,6 +14,10 @@ def html_page(page_name):
 def tanks_page():
     return render_template('thank_you.html')
 
+@app.route('/certificado' )
+def certificado():
+    return render_template('Certificado.html')
+
 def write_to_file(data):
      with open ('database.txt' , mode='a') as database:
           email= data["email"] 
